@@ -17,7 +17,7 @@ So, we also need to cater for their large size, as well as rapid changes.
 
 TL;DR
 
->>> import advertools as adv
+>>> import advertools2 as adv
 >>> import pandas as pd
 >>> adv.logs_to_df(log_file='access.log',
 ...                output_file='access_logs.parquet',
@@ -101,8 +101,8 @@ the plan:
     66.249.73.72 - - [16/Feb/2022:00:18:53 +0000] "GET / HTTP/1.1" 200 1095 "-" "Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
     109.237.103.118 - - [16/Feb/2022:00:20:39 +0000] "GET /.env HTTP/1.1" 404 209 "-" "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36"
     45.12.223.214 - - [16/Feb/2022:00:23:45 +0000] "GET / HTTP/1.0" 200 2240 "http://adver.tools/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36"
-    51.68.77.249 - - [16/Feb/2022:00:26:23 +0000] "GET /robots.txt HTTP/1.1" 404 209 "-" "advertools/0.13.0"
-    51.68.77.249 - - [16/Feb/2022:00:26:23 +0000] "HEAD / HTTP/1.1" 200 0 "-" "advertools/0.13.0"
+    51.68.77.249 - - [16/Feb/2022:00:26:23 +0000] "GET /robots.txt HTTP/1.1" 404 209 "-" "advertools2/0.13.0"
+    51.68.77.249 - - [16/Feb/2022:00:26:23 +0000] "HEAD / HTTP/1.1" 200 0 "-" "advertools2/0.13.0"
     192.241.211.176 - - [16/Feb/2022:00:31:16 +0000] "GET /login HTTP/1.1" 404 209 "-" "Mozilla/5.0 zgrab/0.x"
     66.249.73.69 - - [16/Feb/2022:00:48:56 +0000] "GET /robots.txt HTTP/1.1" 404 209 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
     66.249.73.72 - - [16/Feb/2022:00:48:56 +0000] "GET /staging/urlytics/ HTTP/1.1" 200 520 "-" "Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)"
@@ -116,7 +116,7 @@ the plan:
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools2 as adv
     import pandas as pd
     from ua_parser import user_agent_parser
     pd.options.display.max_columns = None
@@ -264,8 +264,8 @@ Parse the ``user_agent`` column.
    0  Mozilla/5.0 (Linux; Android 6.0.1; Nexus 5X Build/MMB29P) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.80 Mobile Safari/537.36 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)  Googlebot             2           1              Android                     6              0              1                       Spider              Spider             Smartphone
    1  Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/81.0.4044.129 Safari/537.36                                                                                               Chrome               81           0        4044  Linux                                                                             Other
    2  Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.72 Safari/537.36                                                                                      Chrome               90           0        4430  Windows                    10                                                     Other
-   3  advertools/0.13.0                                                                                                                                                                                       Other                                            Other                                                                             Other
-   4  advertools/0.13.0                                                                                                                                                                                       Other                                            Other                                                                             Other
+   3  advertools2/0.13.0                                                                                                                                                                                       Other                                            Other                                                                             Other
+   4  advertools2/0.13.0                                                                                                                                                                                       Other                                            Other                                                                             Other
    5  Mozilla/5.0 zgrab/0.x                                                                                                                                                                                   Other                                            Other                                                                             Other
    6  Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)                                                                                                                                Googlebot             2           1              Other                                                                             Spider              Spider             Desktop
    7  Mozilla/5.0 (compatible; Googlebot/2.1; +http://www.google.com/bot.html)                                                                                                                                Googlebot             2           1              Other                                                                             Spider              Spider             Desktop
@@ -354,7 +354,7 @@ that:
 This can simply be done by specifying a file name through the optional
 `custom_settings` parameter of ``crawl``:
 
->>> import advertools as adv
+>>> import advertools2 as adv
 >>> adv.crawl('https://example.com',
               output_file='example.jl',
               follow_links=True,
@@ -366,7 +366,7 @@ If you run it this way, all logs will be saved to the file you chose,
 Now, you can use the :func:`crawllogs_to_df` function to open the logs in a
 DataFrame:
 
->>> import advertools as adv
+>>> import advertools2 as adv
 >>> logs_df = adv.crawllogs_to_df('example.log')
 
 
@@ -431,7 +431,7 @@ def logs_to_df(log_file, output_file, errors_file, log_format, fields=None):
     used. Check out ``adv.LOG_FORMATS`` and ``adv.LOG_FIELDS`` for the
     available formats and fields.
 
-    >>> import advertools as adv
+    >>> import advertools2 as adv
     >>> import pandas as pd
     >>> adv.logs_to_df(log_file='access.log',
     ...                output_file='access_logs.parquet',
@@ -517,7 +517,7 @@ def crawllogs_to_df(logs_file_path):
     Crawling errors are also interesting, and can be found in rows where
     ``message`` is equal to "error".
 
-    >>> import advertools as adv
+    >>> import advertools2 as adv
     >>> adv.crawl('https://example.com',
                   output_file='example.jl',
                   follow_links=True,

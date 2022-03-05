@@ -67,7 +67,7 @@ one element more than the provided slots to ensure consistency.
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools2 as adv
     desc_text = "Get the latest gadget online. The GX12 model comes with 13 things that do a lot of good stuff for your health. Start shopping now."
     len(desc_text)  # 130
 

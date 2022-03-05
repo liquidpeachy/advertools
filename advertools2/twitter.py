@@ -47,7 +47,7 @@ follows:
    ...     'oauth_token': 'YOUR_OAUTH_TOKEN',
    ...     'oauth_token_secret': 'YOUR_OAUTH_TOKEN_SECRET',
    ... }
-   >>> import advertools as adv
+   >>> import advertools2 as adv
    >>> adv.twitter.set_auth_params(**auth_params)
 
 Now every request you send will include your ``auth_params`` in it, and if

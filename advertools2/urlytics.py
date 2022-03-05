@@ -34,7 +34,7 @@ converts URLs to DataFrames.
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools2 as adv
 
     urls = ['https://netloc.com/path_1/path_2?price=10&color=blue#frag_1',
             'https://netloc.com/path_1/path_2?price=15&color=red#frag_2',

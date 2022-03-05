@@ -62,7 +62,7 @@ matters) and get a ready-to-use table to upload and start running the campaign.
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools2 as adv
 
     products = ['enginering', 'graphic design', 'marketing']
     words = ['jobs', 'careers', 'vacancies', 'full time', 'part time']
@@ -125,7 +125,7 @@ def kw_generate(products, words, max_len=3,
     :param str campaign_name: name of campaign
     :returns keywords_df: a pandas.DataFrame ready to upload
 
-    >>> import advertools as adv
+    >>> import advertools2 as adv
     >>> products = ['bmw', 'toyota']
     >>> words = ['buy', 'second hand']
     >>> kw_df = adv.kw_generate(products, words)

@@ -64,7 +64,7 @@ the stopwords by accessing the dictionary as follows:
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools2 as adv
     adv.stopwords.keys()
 
 .. code-block::

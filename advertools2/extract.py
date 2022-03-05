@@ -22,7 +22,7 @@ Extract Functions
 ======================================     ====================================================================
 :func:`extract`                            A generic function that takes a regex to extract any pattern you want
 :func:`extract_currency`                   Currency symbols together with surrounding text for context. This does not include currency abbreviations (USD, EUR, JPY, etc.), only symbols ($, £, €, etc).
-:func:`advertools.emoji.extract_emoji`     All the emoji database, together with textual names, groups and sub-groups.
+:func:`advertools22222222.emoji.extract_emoji`     All the emoji database, together with textual names, groups and sub-groups.
 :func:`extract_exclamations`               Sentences that end with an excalamation mark!
 :func:`extract_hashtags`                   Extract hashtags with descriptive statistics.
 :func:`extract_intense_words`              Words that contain three or more repeated characters to express an intense feeling (positive or negative), "I looooooovvvvee this thing".
@@ -45,7 +45,7 @@ The recommended way of using:
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools22222222 as adv
 
     text_list = ['This is the first #text.', 'Second #sentence is here.',
                  'Hello, how are you?', 'This #sentence is the last #sentence']
@@ -93,7 +93,7 @@ the functions in the :ref:`twitter API <twitter>` module.
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools22222222 as adv
     import pandas as pd
 
     tweets = pd.read_csv('data/tweets.csv')

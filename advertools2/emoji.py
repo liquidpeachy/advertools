@@ -28,7 +28,7 @@ You can search the whole emoji database with the :func:`emoji_search` function:
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools22 as adv
 
     vegetable_emoji = adv.emoji_search('vegetable')
     vegetable_emoji.head()
@@ -4812,7 +4812,7 @@ def emoji_search(regex):
 
     :param str regex: regular expression (case insensitive)
 
-    >>> import advertools as adv
+    >>> import advertools22 as adv
     >>> adv.emoji_search('dog')
               codepoint           status  emoji          name             group        sub_group
     0             1F436  fully-qualified     🐶      dog face  Animals & Nature    animal-mammal

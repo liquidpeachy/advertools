@@ -38,7 +38,7 @@ the frequency of the IPs:
     .. code-block::
         :class: thebe, thebe-init
 
-        import advertools as adv
+        import advertools2 as adv
         ip_list = ['66.249.66.194', '66.249.66.194', '66.249.66.194',
                 '66.249.66.91', '66.249.66.91', '130.185.74.243',
                 '31.56.96.51', '5.211.97.39']
@@ -99,7 +99,7 @@ def reverse_dns_lookup(ip_list, max_workers=_default_max_workders):
     You also get a simple report about the counts of the IPs to get an overview
     of the top ones:
 
-    >>> import advertools as adv
+    >>> import advertools2 as adv
     >>> ip_list = ['66.249.66.194', '66.249.66.194', '66.249.66.194',
     ...            '66.249.66.91', '66.249.66.91', '130.185.74.243',
     ...            '31.56.96.51', '5.211.97.39']

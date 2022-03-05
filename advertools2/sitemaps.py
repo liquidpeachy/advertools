@@ -62,7 +62,7 @@ Regular XML Sitemaps
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools2 as adv
     
     bbc_sitemap = adv.sitemap_to_df('https://www.bbc.com/sitemaps/https-sitemap-com-archive-1.xml')
     bbc_sitemap.head(10)
@@ -407,11 +407,11 @@ from xml.etree import ElementTree
 
 import pandas as pd
 
-from advertools import __version__ as version
+from advertools2 import __version__ as version
 
 logging.basicConfig(level=logging.INFO)
 
-headers = {'User-Agent': 'advertools-' + version}
+headers = {'User-Agent': 'advertools2-' + version}
 
 
 def _sitemaps_from_robotstxt(robots_url):
@@ -483,7 +483,7 @@ def sitemap_to_df(sitemap_url, max_workers=8, recursive=True):
     if sitemap_url.endswith('xml.gz'):
         xml_text = urlopen(Request(sitemap_url,
                                    headers={'Accept-Encoding': 'gzip',
-                                            'User-Agent': 'advertools-' +
+                                            'User-Agent': 'advertools2-' +
                                                           version}))
         resp_headers = xml_text.getheaders()
         xml_text = GzipFile(fileobj=xml_text)

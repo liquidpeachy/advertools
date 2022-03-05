@@ -23,7 +23,7 @@ To get the robots.txt file into an easily readable format, you can use the
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools2 as adv
 
     amazon = adv.robotstxt_to_df('https://www.amazon.com/robots.txt')
     amazon
@@ -306,9 +306,9 @@ from urllib.request import Request, urlopen
 import pandas as pd
 from protego import Protego
 
-from advertools import __version__ as version
+from advertools2 import __version__ as version
 
-headers = {'User-Agent': 'advertools-' + version}
+headers = {'User-Agent': 'advertools2-' + version}
 
 gzip_start_bytes = b'\x1f\x8b'
 

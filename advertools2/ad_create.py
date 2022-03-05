@@ -18,7 +18,7 @@ replace `product` as many times as you have ads.
     .. code-block::
         :class: thebe, thebe-init
 
-        import advertools as adv
+        import advertools2 as adv
 
         products = ['Dubai', 'Tokyo', 'Singapore']
         adv.ad_create(template='5-star Hotels in {}',

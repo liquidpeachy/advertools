@@ -140,7 +140,7 @@ from concurrent import futures
 import pandas as pd
 import requests
 
-from advertools.serp import _dict_product
+from advertools2.serp import _dict_product
 
 param_regex = '^query$|^ids$|^languages$|^types$|^prefix$|^limit$'
 
