@@ -419,7 +419,7 @@ spider_path = adv.__path__[0] + '/spider.py'
 
 user_agent = f'advertools2/{adv_version}'
 
-BODY_TEXT_SELECTOR = '//body//p//text()'
+BODY_TEXT_SELECTOR = '//body//p//text() | //body//h1//text()'
 
 _IMG_ATTRS = {'alt', 'crossorigin', 'height', 'ismap', 'loading', 'longdesc',
               'referrerpolicy', 'sizes', 'src', 'srcset', 'usemap', 'width'}
