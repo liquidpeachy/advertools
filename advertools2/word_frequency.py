@@ -130,7 +130,7 @@ Below are all the columns of the returned DataFrame:
 .. code-block::
     :class: thebe, thebe-init
 
-    import advertools as adv
+    import advertools2 as adv
     import pandas as pd
     tweets = pd.read_csv('data/tweets.csv')
     tweets
@@ -180,8 +180,8 @@ from collections import defaultdict
 
 import pandas as pd
 
-import advertools as adv
-from advertools.word_tokenize import word_tokenize
+import advertools2 as adv
+from advertools2.word_tokenize import word_tokenize
 
 
 def word_frequency(text_list, num_list=None, phrase_len=1, regex=None,
