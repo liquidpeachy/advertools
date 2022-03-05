@@ -54,12 +54,12 @@ setup(
     include_package_data=True,
     keywords='advertising marketing search-engine-optimization adwords '
              'seo sem bingads keyword-research',
-    name='advertools',
-    packages=find_packages(include=['advertools']),
+    name='advertools2',
+    packages=find_packages(include=['advertools2']),
     setup_requires=setup_requirements,
     test_suite='tests',
     tests_require=test_requirements,
-    url='https://github.com/eliasdabbas/advertools',
+    url='https://github.com/liquidpeachy/advertools2',
     version='0.13.0',
     zip_safe=False,
 )
