@@ -3,10 +3,10 @@ requires = ["flit"]
 build-backend = "flit.buildapi"
 
 [tool.flit.metadata]
-module = "advertools"
+module = "advertools2"
 author = "Elias Dabbas"
 author-email = "eliasdabbas@gmail.com"
-home-page = "https://github.com/eliasdabbas/advertools"
+home-page = "https://github.com/liquidpeachy/advertools2"
 classifiers = ["License :: OSI Approved :: MIT License"]
 requires = [
     "pandas",
